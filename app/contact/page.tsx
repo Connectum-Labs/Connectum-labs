@@ -11,7 +11,6 @@ const contactDetails = [
   { label: 'Entity',    value: 'Connectum Labs Pty Ltd' },
   { label: 'Location',  value: 'Brisbane, Queensland, Australia' },
   { label: 'Email',     value: 'hello@connectumlabs.com', href: 'mailto:hello@connectumlabs.com' },
-  { label: 'AImpact',   value: 'aimpactagency.com.au', href: 'https://aimpactagency.com.au' },
 ]
 
 export default function ContactPage() {

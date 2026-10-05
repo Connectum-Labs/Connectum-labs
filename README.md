@@ -7,8 +7,8 @@ Multi-page Next.js website for Connectum Labs Pty Ltd.
 - `/` — Homepage
 - `/about` — Company info
 - `/ventures` — All ventures
+- `/ventures/agencyops` — AgencyOps (also `/agencyops`)
 - `/ventures/celestial` — Celestial app
-- `/ventures/aimpact-agency` — AImpact Agency
 - `/contact` — Contact form
 
 ## Local development

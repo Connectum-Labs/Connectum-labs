@@ -1,17 +1,24 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const subjects = [
   { value: '',            label: 'Select enquiry type…' },
   { value: 'partnership', label: 'Partnership / venture' },
+  { value: 'agencyops',   label: 'AgencyOps' },
   { value: 'celestial',   label: 'Celestial app' },
-  { value: 'aimpact',     label: 'AImpact Agency' },
   { value: 'general',     label: 'General enquiry' },
 ]
 
 export default function ContactForm() {
   const [fields, setFields] = useState({ name: '', email: '', subject: '', message: '' })
+
+  useEffect(() => {
+    const preset = new URLSearchParams(window.location.search).get('subject')
+    if (preset && subjects.some((s) => s.value === preset)) {
+      setFields((prev) => ({ ...prev, subject: preset }))
+    }
+  }, [])
 
   const set = (k: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setFields((prev) => ({ ...prev, [k]: e.target.value }))

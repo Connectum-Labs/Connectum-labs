@@ -53,7 +53,7 @@ export default function AboutPage() {
           <div className="space-y-5 text-mid font-light leading-relaxed">
             <p>
               Connectum Labs is a technology holding company headquartered in Brisbane, Queensland. We
-              identify opportunities at the intersection of artificial intelligence and consumer demand,
+              identify opportunities where software and artificial intelligence can remove real operational work,
               then build focused software products to address them.
             </p>
             <p>
@@ -62,9 +62,9 @@ export default function AboutPage() {
               infrastructure and operational discipline from the parent entity.
             </p>
             <p>
-              Currently we operate two active ventures: <strong className="text-ink font-medium">Celestial</strong>,
-              an AI-powered astrology application, and{' '}
-              <strong className="text-ink font-medium">AImpact Agency</strong>, a specialist LLM SEO agency.
+              Currently we operate two ventures: <strong className="text-ink font-medium">AgencyOps</strong>,
+              campaign operations software for Queensland real estate agencies, and{' '}
+              <strong className="text-ink font-medium">Celestial</strong>, an AI-powered astrology application.
             </p>
           </div>
         </div>
@@ -81,6 +81,22 @@ export default function AboutPage() {
                 <p className="text-sm text-mid font-light leading-relaxed">{v.body}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Client work ── */}
+      <section className="py-20 border-b border-rule">
+        <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-16 items-start">
+          <div>
+            <p className="section-label">Client work</p>
+            <h2 className="font-serif text-3xl font-medium leading-[1.15] tracking-[-0.015em] text-ink">
+              Alongside our ventures.
+            </h2>
+          </div>
+          <div className="border border-rule p-6">
+            <p className="text-ink text-sm font-medium">Website rebuild for a Brisbane wellbeing practice</p>
+            <p className="text-mid font-light text-xs mt-1">In progress</p>
           </div>
         </div>
       </section>

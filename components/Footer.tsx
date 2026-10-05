@@ -43,19 +43,14 @@ export default function Footer() {
             <p className="font-mono text-[0.62rem] tracking-[0.18em] uppercase text-mid mb-4">Ventures</p>
             <ul className="flex flex-col gap-2">
               <li>
-                <Link href="/ventures/celestial" className="text-xs text-mid hover:text-ink transition-colors">
-                  Celestial
+                <Link href="/ventures/agencyops" className="text-xs text-mid hover:text-ink transition-colors">
+                  AgencyOps
                 </Link>
               </li>
               <li>
-                <a
-                  href="https://aimpactagency.com.au"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs text-mid hover:text-ink transition-colors"
-                >
-                  AImpact Agency ↗
-                </a>
+                <Link href="/ventures/celestial" className="text-xs text-mid hover:text-ink transition-colors">
+                  Celestial
+                </Link>
               </li>
             </ul>
           </div>

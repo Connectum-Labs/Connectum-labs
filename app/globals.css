@@ -46,3 +46,14 @@
       hover:bg-accent hover:text-paper transition-colors duration-200;
   }
 }
+
+/* AgencyOps board: gates clear in sequence on load */
+@media (prefers-reduced-motion: no-preference) {
+  .gate-ok {
+    animation: gate-clear 0.45s ease-out both;
+  }
+  @keyframes gate-clear {
+    from { background-color: #f5f2ec; border-color: #dedad3; color: #6b6560; }
+    to   { background-color: #1a4d3e; border-color: #1a4d3e; color: #f5f2ec; }
+  }
+}

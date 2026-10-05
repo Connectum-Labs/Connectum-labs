@@ -4,10 +4,20 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Connectum Labs — Technology Holding Company',
   description:
-    'Connectum Labs Pty Ltd is a Brisbane-based technology holding company that builds and operates digital products including Celestial and AImpact Agency.',
+    'Connectum Labs Pty Ltd is a Brisbane-based technology holding company that builds and operates digital products including AgencyOps, campaign operations software for Queensland real estate agencies, and Celestial.',
 }
 
 const ventures = [
+  {
+    tag: 'B2B Software · Real Estate',
+    icon: '▦',
+    name: 'AgencyOps',
+    description:
+      'Campaign operations software for Queensland real estate agencies. Tracks every listing from appointment to settlement — AML, Form 2, marketing, open homes, vendor updates and contract dates — on one board.',
+    href: '/ventures/agencyops',
+    external: false,
+    cta: 'Learn more',
+  },
   {
     tag: 'Consumer App · AI',
     icon: '✦',
@@ -17,16 +27,6 @@ const ventures = [
     href: '/ventures/celestial',
     external: false,
     cta: 'Learn more',
-  },
-  {
-    tag: 'Agency · LLM SEO',
-    icon: '◈',
-    name: 'AImpact Agency',
-    description:
-      'A specialist digital agency helping businesses capture visibility in AI-driven search. Auditing, optimising, and scaling content strategies for the era of generative AI and LLM-powered search engines.',
-    href: 'https://aimpactagency.com.au',
-    external: true,
-    cta: 'Visit aimpactagency.com.au',
   },
 ]
 
@@ -54,7 +54,7 @@ export default function HomePage() {
           </h1>
           <p className="text-lg md:text-xl text-mid font-light leading-relaxed max-w-lg mb-10">
             Connectum Labs acquires, builds, and operates technology ventures at the intersection of
-            artificial intelligence and consumer software.
+            artificial intelligence, business software and consumer apps.
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <Link href="/ventures" className="btn-primary">

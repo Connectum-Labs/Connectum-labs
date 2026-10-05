@@ -4,12 +4,24 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Ventures',
-  description: 'Connectum Labs operates Celestial, an AI astrology app, and AImpact Agency, a specialist LLM SEO agency.',
+  description: 'Connectum Labs operates AgencyOps, campaign operations software for Queensland real estate agencies, and Celestial, an AI astrology app.',
 }
 
 const ventures = [
   {
     number: '01',
+    tag: 'B2B Software · Real Estate',
+    name: 'AgencyOps',
+    tagline: 'Every campaign, appointment to settlement, on one board.',
+    description:
+      'AgencyOps is campaign operations software for Queensland real estate agencies. It tracks what each listing is waiting on — AML verification, Form 2, marketing payment, tenant consents — drafts vendor updates from the campaign\'s actual state, runs open home schedules, and keeps contract dates through to settlement.',
+    status: 'Pilot',
+    href: '/ventures/agencyops',
+    external: false,
+    features: ['Prep & launch gates', 'Vendor updates', 'Open home runs', 'Contract milestones'],
+  },
+  {
+    number: '02',
     tag: 'Consumer App · AI',
     name: 'Celestial',
     tagline: 'Astrology, reimagined with AI.',
@@ -19,18 +31,6 @@ const ventures = [
     href: '/ventures/celestial',
     external: false,
     features: ['Birth chart readings', 'Transit insights', 'AI-powered interpretation', 'Personalised guidance'],
-  },
-  {
-    number: '02',
-    tag: 'Agency · LLM SEO',
-    name: 'AImpact Agency',
-    tagline: 'SEO for the AI search era.',
-    description:
-      'AImpact Agency is a specialist digital agency helping businesses capture visibility in AI-driven search environments. We audit content ecosystems, identify LLM citation opportunities, and build content strategies that perform in both traditional search engines and generative AI platforms like ChatGPT and Perplexity.',
-    status: 'Active',
-    href: 'https://aimpactagency.com.au',
-    external: true,
-    features: ['LLM SEO audits', 'AI search optimisation', 'Content strategy', 'Attribution tracking'],
   },
 ]
 
@@ -58,7 +58,7 @@ export default function VenturesPage() {
                   <div className="flex flex-wrap items-center gap-3 mb-4">
                     <span className="font-mono text-[0.62rem] tracking-[0.15em] uppercase text-accent">{v.tag}</span>
                     <span className={`font-mono text-[0.6rem] tracking-[0.12em] uppercase px-2 py-0.5 rounded-full ${
-                      v.status === 'Beta'
+                      v.status === 'Beta' || v.status === 'Pilot'
                         ? 'bg-amber-100 text-amber-700'
                         : 'bg-emerald-100 text-emerald-700'
                     }`}>
